@@ -6,12 +6,11 @@
   </head>
   <body>
     <header class="page-header">
-
       <nav class="site-navigation">
+        <div class="page-logo">
+          <a class="navigation-link" href="index.html"><img src="#" alt="Логотип Седона"></a>
+        </div>
         <ul class="navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link" href="index.html"><img src="#" alt="Логотип Седона"></a>
-          </li>
           <li class="navigation-item">
             <a class="navigation-link" href="index.html">Главная</a>
           </li>
@@ -19,22 +18,22 @@
             <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link-current">Гостиницы</a>
+            <a class="navigation-link navigation-current">Гостиницы</a>
           </li>
         </ul>
         <ul class="navigation-list user-menu">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+          <li class="user-menu-item">
+            <a class="user-menu-link" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+          <li class="user-menu-item">
+            <a class="user-menu-link" href="#">
               <span class="visually-hidden">Избранное</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Хочу сюда!</a>
+          <li class="user-menu-item">
+            <a class="user-menu-link" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -60,23 +59,23 @@
 
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get" oninput="">
           <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title infrastructure">Инфраструктура:</legend>
+            <legend class="catalog-filter-title">Инфраструктура:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="pool" checked>
+                <label>
+                  <input type="checkbox" name="pool" checked>
                   Бассейн
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="parking" checked>
+                <label>
+                  <input type="checkbox" name="parking" checked>
                   Парковка
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="wifi">
+                <label>
+                  <input type="checkbox" name="wifi">
                   Wi-Fi
                 </label>
               </li>
@@ -84,30 +83,30 @@
           </fieldset>
 
           <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title accomodation">Тип жилья:</legend>
+            <legend class="catalog-filter-title">Тип жилья:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="radio" name="accomodation-type" value="hotel" checked>
+                <label>
+                  <input type="radio" name="accomodation-type" value="hotel" checked>
                   Гостиница
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="radio" name="accomodation-type" value="motel">
+                <label>
+                  <input type="radio" name="accomodation-type" value="motel">
                   Мотель
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="radio" name="accomodation-type" value="apartments">
+                <label>
+                  <input type="radio" name="accomodation-type" value="apartments">
                   Апартаменты
                 </label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title price">Стоимость, <span>Р</span>:</legend>
+            <legend class="catalog-filter-title">Стоимость, <span>Р</span>:</legend>
             <div class="input-slider min">
               <label class="control min-price">
                 <input class="slider min-input" type="range" min="0" max="15000" step="1" value="0">
@@ -217,12 +216,7 @@
           </li>
         </ul>
       </section>
-
-
-    </main>
-
-    <footer class="page-footer">
-      <section class="newsletter-catalog">
+      <section class="newsletter newsletter-catalog">
         <h2 class="visually-hidden">Подписка на рассылку</h2>
         <h3>Подпишитесь на рассылку</h3>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
@@ -231,22 +225,26 @@
           <button class="submit-button" type="submit">Подписаться</button>
         </form>
       </section>
+
+    </main>
+
+    <footer class="page-footer">
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <ul class="social-list">
           <li class="social-item">
             <a class="button" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">VKontakte</span>
+              <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
           <li class="social-item">
             <a class="button" href="https://t.me/htmlacademy ">
-              <span class="visually-hidden">Telegram</span>
+              <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
           <li class="social-item">
             <a class="button" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Youtube</span>
+              <span class="visually-hidden">Ютуб</span>
             </a>
           </li>
         </ul>
