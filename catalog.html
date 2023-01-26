@@ -7,10 +7,12 @@
 
   <body>
     <header class="page-header">
+      <div class="page-logo">
+        <a class="navigation-link" href="index.html">
+          <img src="#" alt="Логотип Седона">
+        </a>
+      </div>
       <nav class="site-navigation">
-        <div class="page-logo">
-          <a class="navigation-link" href="index.html"><img src="#" alt="Логотип Седона"></a>
-        </div>
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="index.html">Главная</a>
@@ -137,6 +139,31 @@
 
       <section class="hotel-catalog">
         <h2 class="visually-hidden">Список гостиниц</h2>
+        <div class="search-result">
+          <p class="search">Найдено гостиниц: <output class="result">38</output>
+          </p>
+          <select class="sort-by" name="category">
+            <option value="lower-price">Сначала дешевые</option>
+            <option value="higher-price">Сначала дорогие</option>
+          </select>
+          <ul class="display-as">
+            <li class="plates">
+              <button type="button" class="display-as-button current-display-as">
+                <span class="visually-hidden">Отображать плитками</span>
+              </button>
+            </li>
+            <li class="slideshow">
+              <button type="button" class="display-as-button">
+                <span class="visually-hidden">Отображать слайдами</span>
+              </button>
+            </li>
+            <li class="list">
+              <button type="button" class="display-as-button">
+                <span class="visually-hidden">Отображать списком</span>
+              </button>
+            </li>
+          </ul>
+        </div>
         <ul class="hotel-list">
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
@@ -195,7 +222,7 @@
             </div>
           </li>
         </ul>
-        <ul class="pagination">
+        <ol class="pagination">
           <li class="pagination-item">
             <a class="pagination-link pagination-current">1</a>
           </li>
@@ -216,7 +243,7 @@
           <li class="pagination-item">
             <a class="pagination-link" href="#">10</a>
           </li>
-        </ul>
+        </ol>
       </section>
       <section class="newsletter newsletter-catalog">
         <h2 class="visually-hidden">Подписка на рассылку</h2>
