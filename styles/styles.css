@@ -16,6 +16,95 @@
 
 body {
   font-family: "PT Sans", sans-serif;
-  font-size: ;
-  line-height: ;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.navigation-link {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color:#000000;
+  text-decoration: none;
+}
+
+.user-menu-link {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #756157;
+}
+
+.user-menu-link .favs-number {
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 400;
+  color: #FFFFFF;
+  background-color: #7DB54F;
+}
+
+.intro {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.advantages {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.advantages-list,
+.services-list {
+  list-style: none;
+}
+
+.group-1 h3 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.group-2 h3 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.group-1 {
+  background-color:#83B3D3;
+}
+
+.group-2 {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.group-2:nth-child(3) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.group-1 p {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.group-2 p {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
 }
