@@ -295,3 +295,40 @@ body {
   color: #000000;
   text-decoration: none;
 }
+
+.hotel-type,
+.hotel-min-price {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.hotel-description-page,
+.add-to-favs,
+.in-favs {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #756157;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.add-to-favs {
+  background-color: #82B3D3;
+}
+
+.in-favs {
+  background-color: #7DB54F;
+}
+
+.rating-mark {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #333333;
+  background-color: #F2F2F2;
+  text-transform: uppercase;
+}
