@@ -48,14 +48,30 @@ body {
   background-color: #7DB54F;
 }
 
-.intro {
+.main-page {
+  background-image: url(../images/photos/background-index.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.greeting {
+  background-image: url(../images/main-banner-divider.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.intro,
+.services-title,
+.booking-form h3 {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.advantages {
+.advantages,
+.services-description,
+.booking-form p {
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
@@ -63,7 +79,8 @@ body {
 }
 
 .advantages-list,
-.services-list {
+.services-list,
+.social-list {
   list-style: none;
 }
 
@@ -75,7 +92,8 @@ body {
   text-transform: uppercase;
 }
 
-.group-2 h3 {
+.group-2 h3,
+.services-item h3 {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
@@ -87,7 +105,8 @@ body {
   background-color:#83B3D3;
 }
 
-.group-2 {
+.group-2,
+.services-item:not(:nth-child(2)) {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -96,15 +115,86 @@ body {
 }
 
 .group-1 p {
-  font-size: 18px;
-  line-height: 21px;
   font-weight: 400;
   color: #FFFFFF;
 }
 
-.group-2 p {
-  font-size: 18px;
-  line-height: 21px;
+.group-2 p,
+.services-item p {
   font-weight: 400;
   color: #333333;
+}
+
+.hotel-search {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #756157;
+  text-transform: uppercase;
+}
+
+.newsletter-main-page {
+  background-image: url(../images/photos/background-subscribe.jpg);
+  background-color: #83B3D3;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.newsletter-main-page h3 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.newsletter-main-page p {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.newsletter-subscription .submit-button {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  text-transform: uppercase;
+}
+
+.footer-contacts-phone {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 400;
+  text-decoration: none;
+  font-style: normal;
+  color: inherit;
+}
+
+.newsletter-subscription .field {
+  background-image: url(../images/icons/newsletter-email.svg);
+  background-repeat: no-repeat;
+  background-size: 16px 15px;
+  background-color: #F2F2F2;
+}
+
+.vkontakte .button {
+  background-image: url(../images/icons/social-vk.svg);
+  background-repeat: no-repeat;
+  background-size: 24px 14px;
+}
+
+.telegram .button {
+  background-image: url(../images/icons/social-telegram.svg);
+  background-repeat: no-repeat;
+  background-size: 18px 15px;
+}
+
+.youtube .button {
+  background-image: url(../images/icons/social-youtube.svg);
+  background-repeat: no-repeat;
+  background-size: 22px 17px;
 }
