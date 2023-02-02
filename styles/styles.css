@@ -78,9 +78,16 @@ body {
   color: #333333;
 }
 
+.navigation-list,
 .advantages-list,
 .services-list,
-.social-list {
+.social-list,
+.breadcrumbs,
+.catalog-filter-list,
+.catalog-filter-group,
+.display-as,
+.pagination,
+.hotel-list {
   list-style: none;
 }
 
@@ -136,7 +143,7 @@ body {
 
 .newsletter-main-page {
   background-image: url(../images/photos/background-subscribe.jpg);
-  background-color: #83B3D3;
+  background-color: #82B3D3;
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
@@ -197,4 +204,94 @@ body {
   background-image: url(../images/icons/social-youtube.svg);
   background-repeat: no-repeat;
   background-size: 22px 17px;
+}
+
+.hotels-filter {
+  background-image: url(../images/photos/background-catalog-hotel-filter.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #82B3D3;
+  color: #FFFFFF;
+
+}
+
+.hotels-filter h1 {
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+}
+
+.breadcrumbs-item a {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.catalog-filter-item {
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+}
+
+.catalog-filter .submit-button,
+.catalog-filter .reset-button {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.catalog-filter .submit-button {
+  background-color: #82B3D3;
+}
+
+.search-found {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.sort-by {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.plates .display-as-button {
+  background-image: url(../images/icons/display-as-plates.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.slideshow .display-as-button {
+  background-image: url(../images/icons/display-as-slideshow.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.list .display-as-button {
+  background-image: url(../images/icons/display-as-list.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.hotel-card-link {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
 }
