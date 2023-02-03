@@ -258,6 +258,10 @@ body {
   background-color: #82B3D3;
 }
 
+.catalog-filter .reset-button {
+  background-color: transparent;
+}
+
 .search-found {
   font-size: 30px;
   line-height: 36px;
