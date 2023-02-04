@@ -48,16 +48,14 @@ body {
   background-color: #7DB54F;
 }
 
-.main-page {
-  background-image: url(../images/photos/background-index.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-}
-
-.greeting {
-  background-image: url(../images/main-banner-divider.svg);
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+.greeting-banner {
+  background-image:
+  url(../images/main-banner-divider.svg),
+  url(../images/photos/background-index.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% auto, 100% auto;
+  background-color: #000000;
+  background-position: center bottom, center center;
 }
 
 .intro,
@@ -114,8 +112,7 @@ body {
   background-color:#83B3D3;
 }
 
-.group-2,
-.services-item:not(:nth-child(2)) {
+.group-2 {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -134,6 +131,27 @@ body {
   color: #333333;
 }
 
+.housing {
+  background-image: url(../images/services-house.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.food {
+  background-image: url(../images/services-food.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: #FFFFFF;
+}
+
+.gifts {
+  background-image: url(../images/services-gift.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
 .hotel-search {
   font-size: 20px;
   line-height: 36px;
@@ -141,6 +159,7 @@ body {
   color: #FFFFFF;
   background-color: #756157;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .newsletter-main-page {
@@ -167,6 +186,7 @@ body {
 
 .newsletter-subscription .submit-button,
 .pagination-link {
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -174,6 +194,8 @@ body {
   background-color: #82B3D3;
   text-transform: uppercase;
   text-decoration: none;
+  border: none;
+  padding: 0;
 }
 
 .footer-contacts-phone {
@@ -192,22 +214,31 @@ body {
   background-color: #F2F2F2;
 }
 
-.vkontakte .button {
+.vkontakte .social-item-button {
   background-image: url(../images/icons/social-vk.svg);
   background-repeat: no-repeat;
   background-size: 24px 14px;
+  display: inline-block;
+  width: 24px;
+  height: 14px;
 }
 
-.telegram .button {
+.telegram .social-item-button {
   background-image: url(../images/icons/social-telegram.svg);
   background-repeat: no-repeat;
   background-size: 18px 15px;
+  display: inline-block;
+  width: 18px;
+  height: 15.1px;
 }
 
-.youtube .button {
+.youtube .social-item-button {
   background-image: url(../images/icons/social-youtube.svg);
   background-repeat: no-repeat;
   background-size: 22px 17px;
+  display: inline-block;
+  width: 22px;
+  height: 17px;
 }
 
 .hotels-filter {
@@ -231,6 +262,9 @@ body {
   font-weight: 400;
   text-decoration: none;
   color: inherit;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
 }
 
 .catalog-filter-title {
@@ -247,11 +281,14 @@ body {
 
 .catalog-filter .submit-button,
 .catalog-filter .reset-button {
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
   color: #FFFFFF;
   text-transform: uppercase;
+  border: none;
+  padding: 0;
 }
 
 .catalog-filter .submit-button {
@@ -282,18 +319,27 @@ body {
   background-image: url(../images/icons/display-as-plates.svg);
   background-repeat: no-repeat;
   background-size: auto;
+  display: inline-block;
+  width: 16px;
+  height: 14px;
 }
 
 .slideshow .display-as-button {
   background-image: url(../images/icons/display-as-slideshow.svg);
   background-repeat: no-repeat;
   background-size: auto;
+  display: inline-block;
+  width: 16px;
+  height: 14px;
 }
 
 .list .display-as-button {
   background-image: url(../images/icons/display-as-list.svg);
   background-repeat: no-repeat;
   background-size: auto;
+  display: inline-block;
+  width: 16px;
+  height: 14px;
 }
 
 .hotel-card-link {
@@ -315,6 +361,7 @@ body {
 .hotel-description-page,
 .add-to-favs,
 .in-favs {
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -322,6 +369,8 @@ body {
   background-color: #756157;
   text-transform: uppercase;
   text-decoration: none;
+  border: none;
+  padding: 0;
 }
 
 .add-to-favs {
@@ -361,6 +410,9 @@ body {
   background-size: auto;
   background-color: #FFFFFF;
   color: inherit;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
 }
 
 .favorites-button {
@@ -369,10 +421,26 @@ body {
   background-size: auto;
   background-color: #FFFFFF;
   color: inherit;
+  display: inline-block;
+  width: 18px;
+  height: 17px;
 }
 
 .home-icon {
   background-image: url(../images/icons/to-the-main.svg);
   background-repeat: no-repeat;
   background-size: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip-path: rect(0,0,0,0);
+  overflow: hidden;
 }
