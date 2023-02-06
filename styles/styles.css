@@ -19,7 +19,8 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: #F2F2F2;
+  margin: 0;
 }
 
 .navigation-link {
@@ -54,7 +55,7 @@ body {
   url(../images/photos/background-index.jpg);
   background-repeat: no-repeat, no-repeat;
   background-size: 100% auto, 100% auto;
-  background-color: #000000;
+  background-color: #222c37;
   background-position: center bottom, center center;
 }
 
@@ -89,6 +90,8 @@ body {
 .pagination,
 .hotel-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .group-1 h3 {
@@ -229,7 +232,7 @@ body {
   background-size: 18px 15px;
   display: inline-block;
   width: 18px;
-  height: 15.1px;
+  height: 15px;
 }
 
 .youtube .social-item-button {
@@ -292,7 +295,7 @@ body {
 }
 
 .catalog-filter .submit-button {
-  background-color: #82B3D3;
+  background-color: #756157;
 }
 
 .catalog-filter .reset-button {
@@ -315,7 +318,7 @@ body {
   background-color: #FFFFFF;
 }
 
-.plates .display-as-button {
+.display-as-plates {
   background-image: url(../images/icons/display-as-plates.svg);
   background-repeat: no-repeat;
   background-size: auto;
@@ -324,7 +327,7 @@ body {
   height: 14px;
 }
 
-.slideshow .display-as-button {
+.display-as-slideshow {
   background-image: url(../images/icons/display-as-slideshow.svg);
   background-repeat: no-repeat;
   background-size: auto;
@@ -333,7 +336,7 @@ body {
   height: 14px;
 }
 
-.list .display-as-button {
+.display-as-list {
   background-image: url(../images/icons/display-as-list.svg);
   background-repeat: no-repeat;
   background-size: auto;
@@ -443,4 +446,11 @@ body {
   clip-path: inset(100%);
   clip-path: rect(0,0,0,0);
   overflow: hidden;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
