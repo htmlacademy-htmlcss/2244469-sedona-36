@@ -531,10 +531,6 @@ html {
   margin-left: 285px;
 }
 
-.greeting-banner {
-  height: 485px;
-}
-
 .greeting-text {
   display: block;
   margin: 51px auto 82px;
@@ -542,11 +538,11 @@ html {
 
 .greeting-intro {
   text-align: center;
-  padding: 69px 274px;
+  margin: 0 274px 90px;
 }
 
 .intro {
-  margin: 0 0 25px;
+  margin: 69px 0 25px;
 }
 
 .group-1 {
@@ -566,7 +562,7 @@ html {
 }
 
 .services-invitation {
-  padding: 64px 0;
+  margin: 64px 0;
   text-align: center;
 }
 
@@ -575,27 +571,26 @@ html {
 }
 
 .booking-form {
-  padding: 96px 304px;
+  margin: 96px 304px;
   text-align: center;
 }
 
 .newsletter-main-page,
 .newsletter-catalog {
-  padding: 96px 0 104px;
   text-align: center;
 }
 
 .newsletter h3 {
-  margin: 0 0 20px;
+  margin: 96px auto 20px;
 }
 
 .newsletter p {
   width: 475px;
-  margin: 0 362px;
+  margin: 0 auto 54px;
 }
 
 .newsletter-subscription {
-  margin: 54px 0 0;
+  margin: 0 auto 104px;
 }
 
 .footer-container {
