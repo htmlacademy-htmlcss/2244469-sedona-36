@@ -483,6 +483,16 @@ html {
   display: flex;
 }
 
+.site-navigation {
+  width: 962px;
+}
+
+.navigation-list {
+  width: 432px;
+  margin: 0;
+  padding: 0;
+}
+
 .advantages-list,
 .services-list {
   display: flex;
@@ -506,6 +516,12 @@ html {
   max-width: 452px;
   margin: auto 0;
   padding: 0;
+  justify-content: flex-start;
+}
+
+.navigation-item {
+  margin: 0;
+  padding: 20px 16px;
 }
 
 .user-menu {
