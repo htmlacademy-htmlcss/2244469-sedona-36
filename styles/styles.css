@@ -143,6 +143,7 @@ body {
   background-image: url(../images/services-house.svg);
   background-repeat: no-repeat;
   background-size: auto;
+  background-position: center top;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -150,6 +151,7 @@ body {
   background-image: url(../images/services-food.svg);
   background-repeat: no-repeat;
   background-size: auto;
+  background-position: center top;
   background-color: #FFFFFF;
 }
 
@@ -157,6 +159,7 @@ body {
   background-image: url(../images/services-gift.svg);
   background-repeat: no-repeat;
   background-size: auto;
+  background-position: center top;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -465,6 +468,8 @@ body {
   flex-grow: 1;
 }
 
+/*СЕТКИ*/
+
 html {
   height: 100%;
 }
@@ -487,12 +492,6 @@ html {
   width: 962px;
 }
 
-.navigation-list {
-  width: 432px;
-  margin: 0;
-  padding: 0;
-}
-
 .advantages-list,
 .services-list {
   display: flex;
@@ -513,7 +512,7 @@ html {
 }
 
 .navigation-menu {
-  max-width: 452px;
+  max-width: 642px;
   margin: auto 0;
   padding: 0;
   justify-content: flex-start;
@@ -528,21 +527,22 @@ html {
   width: 268px;
   margin: auto 0;
   padding: 0;
-  margin-left: 285px;
+  margin-left: auto;
 }
 
-.greeting-text {
-  display: block;
-  margin: 51px auto 82px;
+.greeting-banner {
+  margin: 0;
+  padding: 49px 49px 79px;
+  text-align: center;
 }
 
 .greeting-intro {
   text-align: center;
-  margin: 0 274px 90px;
+  padding: 69px 274px;
 }
 
 .intro {
-  margin: 69px 0 25px;
+  margin: 0 0 25px;
 }
 
 .group-1 {
@@ -551,62 +551,103 @@ html {
   align-items: center;
 }
 
+.advantages-item-text {
+  padding: 100px 85px;
+  margin: 0;
+  text-align: center;
+}
+
+.advantages-item-text-center {
+  padding: 112px 85px;
+  margin: 0;
+  text-align: center;
+}
+
 .group-2,
 .group-3,
 .services-item {
   display: flex;
   flex-wrap: wrap;
   width: 400px;
-  align-items: center;
-  justify-content: center;
 }
 
 .services-invitation {
-  margin: 64px 0;
+  padding: 64px 347px;
   text-align: center;
 }
 
-.services-title {
-  margin: 0 347px 20px;
+.services-title,
+.booking-form h3,
+.newsletter h3 {
+  margin: 0 0 20px;
+}
+
+.services-item-text {
+  display: flex;
+  flex-direction: column;
+  padding: 153px 85px 81px;
+  margin: 0;
+  text-align: center;
+}
+
+.advantages-item h3,
+.services-item-text h3 {
+  margin: 0 0 30px;
+}
+
+.advantages-item p,
+.services-description,
+.services-item-text p,
+.booking-form p,
+.newsletter p {
+  margin: 0;
 }
 
 .booking-form {
-  margin: 96px 304px;
+  padding: 96px 304px;
   text-align: center;
+}
+
+.hotel-search {
+  display: inline-block;
+  margin-top: 54px;
+  padding: 8px 50px;
 }
 
 .newsletter-main-page,
 .newsletter-catalog {
+  padding: 96px 258px 104px;
   text-align: center;
 }
 
-.newsletter h3 {
-  margin: 96px auto 20px;
-}
-
-.newsletter p {
-  width: 475px;
-  margin: 0 auto 54px;
-}
-
 .newsletter-subscription {
-  margin: 0 auto 104px;
+  margin: 54px 0 0;
 }
 
 .footer-container {
-  justify-content: space-between;
-  padding: 45px 70px 35px;
+  padding: 40px 70px 30px;
 }
 
 .social-list {
-  width: 142px;
-  justify-content: space-evenly;
+  max-width: 242px;
   margin: auto 0;
+  margin-right: auto;
+  padding: 5px;
+  justify-content: flex-start;
+}
+
+.social-item {
+  padding: 13px 11px;
 }
 
 .developer-logo {
   margin: auto 0;
+  margin-left: auto;
   padding: 0;
+}
+
+.footer-contacts {
+  margin: 0 auto;
 }
 
 /*CATALOG*/
