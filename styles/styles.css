@@ -143,7 +143,7 @@ body {
   background-image: url(../images/services-house.svg);
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: center top;
+  background-position: 162px 81px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -151,7 +151,7 @@ body {
   background-image: url(../images/services-food.svg);
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: center top;
+  background-position: 162px 81px;
   background-color: #FFFFFF;
 }
 
@@ -159,7 +159,7 @@ body {
   background-image: url(../images/services-gift.svg);
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: center top;
+  background-position: 162px 81px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -530,6 +530,11 @@ html {
   margin-left: auto;
 }
 
+.booking-button {
+  display: inline-block;
+  padding: 8px 34px;
+}
+
 .greeting-banner {
   margin: 0;
   padding: 49px 49px 79px;
@@ -583,9 +588,7 @@ html {
 }
 
 .services-item-text {
-  display: flex;
-  flex-direction: column;
-  padding: 153px 85px 81px;
+  padding: 183px 85px 81px;
   margin: 0;
   text-align: center;
 }
