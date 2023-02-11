@@ -422,6 +422,7 @@ body {
   background-repeat: no-repeat;
   background-size: auto;
   background-color: #FFFFFF;
+  background-position: 12px 22px;
   color: inherit;
   display: inline-block;
   width: 18px;
@@ -433,10 +434,20 @@ body {
   background-repeat: no-repeat;
   background-size: auto;
   background-color: #FFFFFF;
+  background-position: 12px 22px;
   color: inherit;
   display: inline-block;
   width: 18px;
   height: 17px;
+}
+
+.favs-number {
+  position: absolute;
+  top: 10px;
+  left: 972px;
+  padding: 5px;
+  border-radius: 50%;
+  text-align: center;
 }
 
 .home-icon {
@@ -489,7 +500,7 @@ html {
 }
 
 .site-navigation {
-  width: 962px;
+  width: 1100px; /*962px; - из-за position absolute у лого, он вылетел, поэтому увеличила*/
 }
 
 .advantages-list,
@@ -500,25 +511,31 @@ html {
 
 .page-header {
   width: 1200px;
-  height: 64px;
+  /*height: 64px;*/
   box-sizing: border-box;
   padding: 0 70px;
 }
 
-.page-logo {
+.navigation-link-page-logo {
   width: 140px;
   margin-right: 28px;
-  z-index: 1;
+  /*z-index: 1;*/
+  padding: 0;
+  position: absolute; /*чтобы не задавать фиксированную высоту хэдеру*/
+  top: 0;
+  left: 110px;
 }
 
 .navigation-menu {
+  flex-wrap: wrap;
   max-width: 642px;
-  margin: auto 0;
+  margin: 0 0 0 168px;
   padding: 0;
   justify-content: flex-start;
 }
 
-.navigation-item {
+.navigation-link {
+  display: inline-block;
   margin: 0;
   padding: 20px 16px;
 }
@@ -533,6 +550,9 @@ html {
 .booking-button {
   display: inline-block;
   padding: 8px 34px;
+  border-radius: 4px;
+  margin: 14px 0;
+  margin-left: 20px;
 }
 
 .greeting-banner {
@@ -767,4 +787,18 @@ html {
   width: 60px;
   height: 60px;
   text-align: center;
+}
+
+/*МИКРОСЕТКИ*/
+
+.search-button,
+.favorites-button {
+  min-width: 44px;
+  min-height: 64px;
+  margin-top: auto;
+  padding: 0;
+}
+
+.user-menu {
+  height: 64px;
 }
