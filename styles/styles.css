@@ -787,6 +787,7 @@ html {
 .hotel-card-image {
   margin: 0;
   padding: 0;
+  margin-bottom: 16px;
 }
 
 .rating-mark {
@@ -957,4 +958,20 @@ html {
   display: flex;
   margin: 0;
   padding: 0;
+}
+
+.hotel-card-title {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.hotel-type,
+.hotel-min-price {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.hotel-card-link {
+  display: block;
+  margin: 0;
 }
