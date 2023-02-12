@@ -59,7 +59,7 @@ body {
   background-repeat: no-repeat, no-repeat;
   background-size: 100% auto, 100% auto;
   background-color: #222c37;
-  background-position: center bottom, center center;
+  background-position: bottom, center;
 }
 
 .intro,
@@ -224,6 +224,7 @@ body {
   background-size: 16px 15px;
   background-color: #F2F2F2;
   margin: 0;
+  background-position: 367px center;
 }
 
 .vkontakte .social-item-button {
@@ -231,8 +232,8 @@ body {
   background-repeat: no-repeat;
   background-size: 24px 14px;
   display: inline-block;
-  width: 24px;
-  height: 14px;
+  padding: 0 10px;
+  background-position: center;
 }
 
 .telegram .social-item-button {
@@ -240,8 +241,8 @@ body {
   background-repeat: no-repeat;
   background-size: 18px 15px;
   display: inline-block;
-  width: 18px;
-  height: 15px;
+  padding: 0 10px;
+  background-position: center;
 }
 
 .youtube .social-item-button {
@@ -249,8 +250,8 @@ body {
   background-repeat: no-repeat;
   background-size: 22px 17px;
   display: inline-block;
-  width: 22px;
-  height: 17px;
+  padding: 0 10px;
+  background-position: center;
 }
 
 .hotels-filter {
@@ -442,11 +443,11 @@ body {
 }
 
 .favs-number {
-  position: absolute;
-  top: 10px;
-  left: 972px;
-  padding: 5px;
-  border-radius: 50%;
+  position: relative;
+  top: 8px;
+  left: 20px;
+  padding: 4px;
+  border-radius: 10px;
   text-align: center;
 }
 
@@ -557,13 +558,13 @@ html {
 
 .greeting-banner {
   margin: 0;
-  padding: 49px 49px 79px;
+  padding: 48px 50px 80px;
   text-align: center;
 }
 
 .greeting-intro {
   text-align: center;
-  padding: 69px 274px;
+  padding: 70px 274px;
 }
 
 .intro {
@@ -577,7 +578,7 @@ html {
 }
 
 .advantages-item-text {
-  padding: 100px 85px;
+  padding: 100px 86px;
   margin: 0;
   text-align: center;
 }
@@ -635,6 +636,7 @@ html {
   display: inline-block;
   margin-top: 54px;
   padding: 8px 50px;
+  border-radius: 4px;
 }
 
 .newsletter-main-page,
@@ -652,15 +654,12 @@ html {
 }
 
 .social-list {
+  flex-wrap: wrap;
   max-width: 242px;
   margin: auto 0;
   margin-right: auto;
-  padding: 5px;
+  padding: 5px 0;
   justify-content: flex-start;
-}
-
-.social-item {
-  padding: 13px 11px;
 }
 
 .developer-logo {
@@ -801,4 +800,41 @@ html {
 
 .user-menu {
   height: 64px;
+}
+
+.advantages-item-text-center h3 {
+  padding: 0 27px;
+}
+
+.newsletter p {
+  padding: 0 104px;
+}
+
+.newsletter-subscription {
+  width: 684px;
+  display: flex;
+}
+
+.newsletter-subscription .submit-button {
+  padding: 8px 50px;
+  border-radius: 0 4px 4px 0;
+  width: 232px;
+}
+
+input[type="email"] {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  width: 452px;
+  border-radius: 4px 0 0 4px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  padding-left: 20px;
+}
+
+.social-item-button {
+  min-width: 26px;
+  min-height: 38px;
 }
