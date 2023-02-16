@@ -775,6 +775,11 @@ html {
   padding: 20px;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  gap: 16px 20px;
+  align-items: center;
+  margin: 0;
 }
 
 .hotel-card-image {
@@ -782,14 +787,6 @@ html {
   padding: 0;
   margin-bottom: 16px;
   object-fit: contain;
-}
-
-.hotel-card-content {
-  display: grid;
-  grid-template-columns: repeat(2, 140px);
-  gap: 16px 20px;
-  align-items: center;
-  margin: 0;
 }
 
 .hotel-card-link {
@@ -967,14 +964,9 @@ html {
   padding: 0;
 }
 
-.hotel-card-title {
+.hotel-card-title,
+.hotel-card p {
   margin: 0;
-}
-
-.hotel-type,
-.hotel-min-price {
-  margin: 0;
-  margin-bottom: 16px;
 }
 
 .pagination-in-between {
