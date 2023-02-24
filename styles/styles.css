@@ -760,7 +760,7 @@ html {
 .hotel-list-block {
   margin: 0;
   padding: 0;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 .hotel-list {
@@ -969,6 +969,7 @@ html {
 .pagination-block {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .hotel-card-title,
@@ -1299,6 +1300,15 @@ input[type=radio]:focus-visible {
 
 .in-between .pagination-link {
   background-color: transparent;
+}
+
+.pagination-block::before {
+  content: "";
+  position: absolute;
+  width: 1060px;
+  height: 1px;
+  background-color: #E6E6E6;
+  top: -40px;
 }
 
 .in-between .pagination-link::after {
