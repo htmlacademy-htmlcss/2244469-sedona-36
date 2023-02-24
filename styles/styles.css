@@ -270,6 +270,12 @@ body {
   margin: 0;
 }
 
+.breadcrumbs-item {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
 .breadcrumbs-item a {
   font-size: 16px;
   line-height: 21px;
@@ -277,6 +283,11 @@ body {
   text-decoration: none;
   color: inherit;
   display: inline-block;
+}
+
+.breadcrumbs-item:not(:first-child) a {
+  padding: 0 5px;
+  margin: 0 5px;
 }
 
 .catalog-filter-title {
@@ -448,11 +459,10 @@ body {
 }
 
 .home-icon {
-  background-image: url(../images/icons/to-the-main.svg);
-  background-repeat: no-repeat;
+  background: url(../images/icons/to-the-main.svg) no-repeat left bottom;
   width: 13px;
-  height: 12px;
-  background-position: bottom;
+  height: 13px;
+  margin-right: 10px;
 }
 
 .visually-hidden {
@@ -856,23 +866,24 @@ html {
 }
 
 .breadcrumbs {
-  align-items: center;
-  margin-bottom: 40px;
+  align-items: flex-end;
+  margin: 0;
+  padding: 0;
 }
 
 .breadcrumbs-item:not(:last-child) {
-  margin-right: 5px;
+  margin-right: 8px;
 }
 
 .breadcrumbs-item:not(:last-child)::after {
   content: "";
   display: inline-block;
-  background-image: url("../images/catalog-breadcrumbs-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: 0 5px;
+  background: url("../images/catalog-breadcrumbs-arrow.svg") no-repeat center;
+  margin: 0;
   width: 8px;
   height: 12px;
+  position: absolute;
+  top: 5px;
 }
 
 .catalog-filter-group-left,
@@ -1251,15 +1262,15 @@ input[type=radio]:focus-visible {
   outline: transparent;
 }
 
-.breadcrumbs-item:hover {
+.breadcrumbs-item:hover a {
   opacity: 0.6;
 }
 
-.breadcrumbs-item:focus {
+.breadcrumbs-item:focus a {
   opacity: 1;
 }
 
-.breadcrumbs-item:active {
+.breadcrumbs-item:active a {
   opacity: 0.3;
 }
 
