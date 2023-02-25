@@ -231,23 +231,11 @@ body {
 }
 
 .social-item-button {
-  display: inline-block;
-  background-position: 50% 50%;
-  background-size: auto;
-  width: 24px;
-  height: 18px;
-}
-
-.vkontakte .social-item-button {
-  padding: 11px 10px;
-}
-
-.telegram .social-item-button {
-  padding: 12px 11px;
-}
-
-.youtube .social-item-button {
-  padding: 11px 12px;
+  width: 47px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hotels-filter {
@@ -454,6 +442,9 @@ body {
   top: -12px;
   left: 10px;
   padding: 4px;
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: 20px;
   border-radius: 10px;
   text-align: center;
 }
@@ -588,14 +579,12 @@ html {
   padding: 100px 85px;
   margin: 0;
   text-align: center;
-  position: relative;
 }
 
 .advantages-item-text-center {
   padding: 112px 85px;
   margin: 0;
   text-align: center;
-  position: relative;
 }
 
 .group-2,
@@ -883,7 +872,7 @@ html {
   width: 8px;
   height: 12px;
   position: absolute;
-  top: 5px;
+  bottom: 3px;
 }
 
 .catalog-filter-group-left,
@@ -969,8 +958,10 @@ html {
 .pagination-link {
   display: block;
   box-sizing: border-box;
-  padding: 11px 18px;
   border-radius: 4px;
+  width: 60px;
+  height: 60px;
+  padding: 12px;
 }
 
 .pagination-item:not(:last-child) {
@@ -995,52 +986,33 @@ html {
 /*ДЕКОРАТИВНЫЕ ЭЛЕМЕНТЫ*/
 
 .rating-stars {
-  height: 37px;
+  height: 18px;
+  background: url("../images/hotel-rating-star.svg") space;
 }
 
 .five-stars {
-  background:
-  url("../images/hotel-rating-star.svg") no-repeat 0 10px,
-  url("../images/hotel-rating-star.svg") no-repeat 24px 10px,
-  url("../images/hotel-rating-star.svg") no-repeat 48px 10px,
-  url("../images/hotel-rating-star.svg") no-repeat 72px 10px,
-  url("../images/hotel-rating-star.svg") no-repeat 96px 10px;
-  background-size: 18px 17px, 18px 17px, 18px 17px, 18px 17px, 18px 17px;
+  width: 106px;
 }
 
 .four-stars {
-  background:
-  url("../images/hotel-rating-star.svg") no-repeat 0 10px,
-  url("../images/hotel-rating-star.svg") no-repeat 24px 10px,
-  url("../images/hotel-rating-star.svg") no-repeat 48px 10px,
-  url("../images/hotel-rating-star.svg") no-repeat 72px 10px;
-  background-size: 18px 17px, 18px 17px, 18px 17px, 18px 17px;
+  width: 83px;
 }
 
 .three-stars {
-  background:
-  url("../images/hotel-rating-star.svg") no-repeat 0 10px,
-  url("../images/hotel-rating-star.svg") no-repeat 24px 10px,
-  url("../images/hotel-rating-star.svg") no-repeat 48px 10px;
-  background-size: 18px 17px, 18px 17px, 18px 17px;
+  width: 61px;
 }
 
 .two-stars {
-  background:
-  url("../images/hotel-rating-star.svg") no-repeat 0 10px,
-  url("../images/hotel-rating-star.svg") no-repeat 24px 10px;
-  background-size: 18px 17px, 18px 17px;
+  width: 39px;
 }
 
 .one-star {
-  background:
-  url("../images/hotel-rating-star.svg") no-repeat 0 10px;
-  background-size: 18px 17px;
+  width: 20px;
 }
 
 .navigation-current::before {
   position: absolute;
-  top: 63px;
+  bottom: -1px;
   left: 16px;
   right: 16px;
   height: 2px;
@@ -1049,25 +1021,27 @@ html {
 }
 
 .advantages-item h3 {
-  margin-bottom: 62px;
+  margin-bottom: 30px;
+  padding-bottom: 32px;
+  position: relative;
 }
 
 .advantages-item-text h3::before {
   position: absolute;
-  top: 185px;
-  left: 170px;
-  right: 170px;
+  bottom: 0;
+  left: 85px;
   height: 2px;
+  width: 60px;
   background-color: rgba(255, 255, 255, 0.3);
   content: "";
 }
 
 .advantages-item-text-center h3::before {
   position: absolute;
-  top: 198px;
-  left: 170px;
-  right: 170px;
+  bottom: 0;
+  left: 85px;
   height: 2px;
+  width: 60px;
   background-color: rgba(0, 0, 0, 0.3);
   content: "";
 }
@@ -1262,31 +1236,29 @@ input[type=radio]:focus-visible {
   outline: transparent;
 }
 
-.breadcrumbs-item:hover a {
+.breadcrumbs-item a[href]:hover {
   opacity: 0.6;
 }
 
-.breadcrumbs-item:focus a {
+.breadcrumbs-item a[href]:focus {
   opacity: 1;
 }
 
-.breadcrumbs-item:active a {
+.breadcrumbs-item a[href]:active {
   opacity: 0.3;
 }
 
 .sort-by:hover {
-  outline: 2px solid #68A2CA;
-  outline-offset: -2px;
+  border: 2px solid #68A2CA;
 }
 
 .sort-by:focus {
-  outline: 2px solid #68A2CA;
-  outline-offset: -2px;
+  border: 2px solid #68A2CA;
+  outline: transparent;
 }
 
 .sort-by:active {
-  outline: 2px solid #3F5E72;
-  outline-offset: -2px;
+  border: 2px solid #3F5E72;
 } /*Почему-то не работает*/
 
 .display-as-wrapper .current-display-as {
@@ -1295,18 +1267,17 @@ input[type=radio]:focus-visible {
 }
 
 .display-as-wrapper a:hover {
-  outline: 2px solid #000000;
-  outline-offset: -2px;
+  border: 2px solid #000000;
 }
 
 .display-as-wrapper a:focus {
-  outline: 2px solid #68A2CA;
-  outline-offset: -2px;
+  border: 2px solid #68A2CA;
+  outline: transparent;
 }
 
 .display-as-wrapper a:active {
-  outline: 2px solid #000000;
-  outline-offset: -2px;
+  border: 2px solid #000000;
+  outline: transparent;
 }
 
 .in-between .pagination-link {
