@@ -1317,3 +1317,51 @@ input[type=radio]:focus-visible {
 .sort-by:disabled {
   opacity: 0.3;
 }
+
+.navigation-link-page-logo[href]:hover,
+.site-navigation a:not(.navigation-current):not(.booking-button):hover,
+.hotel-card-link img:hover {
+  opacity: 0.6;
+}
+
+.navigation-link-page-logo[href]:focus,
+.site-navigation a:not(.navigation-current):not(.booking-button):focus {
+  outline: 2px solid #000000;
+  outline-offset: -2px;
+  border-radius: 4px;
+}
+
+.hotel-card-link h3:hover {
+  text-decoration: underline;
+}
+
+.hotel-card .hotel-card-link:focus {
+  outline: 2px solid #68A2CA;
+  border-radius: 4px;
+  outline-offset: 4px;
+}
+
+.navigation-link-page-logo[href]:active,
+.site-navigation a:not(.navigation-current):not(.booking-button):active,
+.hotel-card-link h3:active,
+.hotel-card .hotel-card-link:active {
+  opacity: 0.8;
+  outline: transparent;
+  text-decoration: none;
+}
+
+input[type=email]:hover {
+  background-color: #E6E6E6;
+}
+
+input[type=email]:focus {
+  background-color: #E6E6E6;
+  outline: 2px solid #83B3D3;
+  outline-offset: -2px;
+}
+
+input[type=email]:active {
+  background-color: #F2F2F2;
+  outline: 2px solid #83B3D3;
+  outline-offset: -2px;
+}
