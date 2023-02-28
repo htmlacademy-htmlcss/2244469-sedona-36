@@ -1541,18 +1541,17 @@ input[type=email]:active {
   right: 16px;
 }
 
-.hotel-search-form {
-  display: grid;
-  grid-template-columns: 138px 110px 88px 131px 110px;
-  grid-template-rows: repeat(4, min-content);
-  row-gap: 48px;
-  margin: 0;
-}
-
 .hotel-search-form p,
 .hotel-search-form span {
   margin: 0;
   padding: 0;
+}
+
+.hotel-search-form {
+  display: grid;
+  grid-template-columns: 138px 110px 88px 131px 110px;
+  grid-template-rows: repeat(2, auto) 23px repeat(2, auto) 23px auto 48px auto;
+  margin: 0;
 }
 
 .modal-title {
@@ -1565,19 +1564,21 @@ input[type=email]:active {
   grid-column: 1/-1;
 }
 
-.guest-number-left {
+.guest-number-field.left-side {
   grid-column: 1/3;
 }
 
-.guest-number-right {
+.guest-number-field.right-side {
   grid-column: 4/-1;
 }
 
-.guest-number-left,
-.guest-number-right {
+.guest-number-field.left-side,
+.guest-number-field.right-side {
+  grid-row: -3/-4;
   display: flex;
   align-items: center;
   position: relative;
+  justify-content: space-between;
 }
 
 .modal.submit-button {
@@ -1592,6 +1593,7 @@ input[type=email]:active {
   border: none;
   border-radius: 10px;
   padding: 18px;
+  grid-row: -1/-2;
 }
 
 .form-label {
@@ -1688,18 +1690,26 @@ input[type=email]:active {
   position: relative;
 }
 
-.booking-date .dates-message,
-.dates-message .warning {
-  display: inline-block;
+.hotel-search-form .dates-message {
   color: #333333;
-  position: absolute;
   padding: 4px 20px;
-  top: 100%;
-  left: 137px;
+  grid-column: 2/-1;
+}
+
+.dates-message.warning {
+  grid-row: -5/-6;
 }
 
 .dates-message.error-warning {
   color: #FF5757;
+  grid-row: 2/3;
+}
+
+.check-in.booking-date {
+  grid-row: 1/2;
+}
+.check-out.booking-date {
+  grid-row: 4/5;
 }
 
 .guest-number {
@@ -1787,8 +1797,7 @@ input[type=email]:active {
 }
 
 .booking-date .form-label,
-.guest-number-left .form-label,
-.guest-number-right .form-label {
+.guest-number .form-label {
   margin-right: auto;
 }
 
@@ -1882,7 +1891,7 @@ input[type=email]:active {
 .modal.submit-button:active span {
   opacity: 0.3;
 }
-
+/*
 .modal-container-close {
   display: none;
 }

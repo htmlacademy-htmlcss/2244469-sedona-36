@@ -190,17 +190,17 @@
         </button>
         <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
         <form class="hotel-search-form" action="https://echo.htmlacademy.ru/" method="get">
-          <p class="field-group booking-date">
+          <p class="field-group check-in booking-date">
             <label class="form-label" for="check-in-date">Дата заезда:</label>
             <input class="booking-date-field" type="text" id="check-in-date" name="check-in-date" placeholder="Укажите дату">
-            <span class="dates-message error-warning">Мы не можем отправить вас в прошлое.</span>
           </p>
-          <p class="field-group booking-date">
+          <span class="dates-message error-warning">Мы не можем отправить вас в прошлое.</span>
+          <p class="field-group check-out booking-date">
             <label class="form-label" for="check-out-date">Дата выезда:</label>
             <input class="booking-date-field" type="text" id="check-out-date" name="check-out-date" placeholder="Укажите дату">
-            <span class="dates-message warning">На эти даты есть свободные номера. Пока есть.</span>
           </p>
-          <p class="field-group guest-number-left">
+          <span class="dates-message warning">На эти даты есть свободные номера. Пока есть.</span>
+          <p class="guest-number-field left-side">
             <label class="form-label" for="guest-number-adults">Взрослые:</label>
             <input class="guest-number adults" id="guest-number-adults" name="guest-number-adults" type="number" step="1" value="2" min="1">
             <button class="guest-number-control minus-left" type="button">
@@ -210,7 +210,7 @@
               <span class="visually-hidden">Кнопка плюс для прибавления количества гостей</span>
             </button>
           </p>
-          <p class="field-group guest-number-right">
+          <p class="guest-number-field right-side">
             <span class="form-label">
               <label class="form-label" for="guest-number-children">Дети:</label>
               <span class="tooltip">
