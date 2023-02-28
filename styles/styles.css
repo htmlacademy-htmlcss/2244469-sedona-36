@@ -435,12 +435,13 @@ body {
   width: 20px;
   height: 20px;
   padding: 22px 12px;
+  position: relative;
 }
 
 .favs-number {
-  position: relative;
-  top: -12px;
-  left: 10px;
+  position: absolute;
+  top: 12px;
+  left: 20px;
   padding: 4px;
   display: inline-block;
   box-sizing: border-box;
@@ -548,10 +549,13 @@ html {
 
 .booking-button {
   display: inline-block;
-  padding: 8px 34px;
+  padding: 8px;
   border-radius: 4px;
   margin: 14px 0;
   margin-left: 20px;
+  box-sizing: border-box;
+  min-width: 160px;
+  text-align: center;
 }
 
 .greeting-banner {
@@ -697,16 +701,22 @@ html {
   flex-direction: column;
 }
 
-.catalog-filter-group-left {
-  width: 151px;
+.catalog-filter-group-left,
+.catalog-filter-group-middle {
+  width: 150px;
   margin: 0 70px 0 0;
   padding: 0;
 }
 
+.catalog-filter-group-middle {
+  margin-right: 167px;
+}
+
 .catalog-filter-group-right {
   width: 288px;
-  margin: 0 70px;
+  margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .buttons-container {
@@ -876,12 +886,9 @@ html {
 }
 
 .catalog-filter-group-left,
+.catalog-filter-group-middle,
 .catalog-filter-group-right {
   border: none;
-}
-
-.catalog-filter-group-left {
-  width: 150px;
 }
 
 .catalog-filter-title {
@@ -890,7 +897,7 @@ html {
 
 .sort-by {
   width: 292px;
-  padding: 12px 18px;
+  padding: 12px 46px 12px 18px;
   border-radius: 4px;
   border: 2px solid #E5E5E5;
   color: #333333;
@@ -931,6 +938,7 @@ html {
   margin: 0;
   box-sizing: border-box;
   max-width: 140px;
+  text-align: center;
 }
 
 .hotel-card-content p {
@@ -938,21 +946,21 @@ html {
 }
 
 .hotel-description-page {
-  padding: 8px 26px;
+  padding: 8px;
 }
 
 .add-to-favs {
-  padding: 8px 20px;
+  padding: 8px;
   cursor: pointer;
 }
 
 .in-favs {
-  padding: 8px 18px;
+  padding: 8px;
   cursor: pointer;
 }
 
 .rating-mark {
-  padding: 8px 22px;
+  padding: 8px;
 }
 
 .pagination-link {
@@ -1159,6 +1167,7 @@ html {
 
 .catalog-filter-item {
   margin: auto 0;
+  position: relative;
 }
 
 input[type=checkbox],
@@ -1186,14 +1195,14 @@ input[type=checkbox]:checked {
   background-color: #FFFFFF;
 }
 
-input[type=radio]:checked::after {
-  background-color: #3F5E72;
+input[type=radio]:checked + .radio-button-checked::before {
   content: "";
+  background-color: #3F5E72;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   position: absolute;
-  top: 5px;
+  top: 6px;
   left: 5px;
 }
 
@@ -1259,7 +1268,7 @@ input[type=radio]:focus-visible {
 
 .sort-by:active {
   border: 2px solid #3F5E72;
-} /*Почему-то не работает*/
+}
 
 .display-as-wrapper .current-display-as {
   border: 2px solid #000000;
@@ -1364,4 +1373,119 @@ input[type=email]:active {
   background-color: #F2F2F2;
   outline: 2px solid #83B3D3;
   outline-offset: -2px;
+}
+
+.price-range {
+  display: flex;
+  position: relative;
+}
+
+.price.min-input,
+.price.max-input {
+  width: 143px;
+  padding: 12px 20px;
+  background-color: #F2F2F2;
+  color: #000000;
+  display: block;
+  box-sizing: border-box;
+  border: none;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: left;
+  position: relative;
+  padding-right: 44px;
+}
+
+.price.min-input::-webkit-outer-spin-button,
+.price.min-input::-webkit-inner-spin-button,
+.price.max-input::-webkit-outer-spin-button,
+.price.max-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.price.min-input:hover,
+.price.max-input:hover {
+  background-color: #E6E6E6;
+}
+
+.price.min-input:focus,
+.price.max-input:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.price.min-input:active,
+.price.max-input:active {
+  background-color: #F2F2F2;
+  outline: 2px solid #000000;
+  outline-offset: -1px;
+}
+
+.input-area .min-price {
+  position: absolute;
+  color: #000000;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  left: 106px;
+  top: 12px;
+}
+
+.input-area .max-price {
+  position: absolute;
+  color: #000000;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  right: 20px;
+  top: 12px;
+}
+
+.price.min-input {
+  border-radius: 4px 0px 0px 4px;
+  margin-right: 2px;
+}
+
+.price.max-input {
+  border-radius: 0px 4px 4px 0px;
+}
+
+.input-slider {
+  position: absolute;
+  bottom: 0;
+}
+
+.range-scale {
+  position: absolute;
+  width: 287px;
+  height: 4px;
+  bottom: -56px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  width: 226px;
+  background-color: #FFFFFF;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  border: none;
+  top: -8px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.toggle-max {
+  left: 206px;
 }

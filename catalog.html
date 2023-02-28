@@ -64,7 +64,7 @@
           </div>
           <h2 class="visually-hidden">Фильтр гостиниц</h2>
           <div class="hotels-filter-container">
-            <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get" oninput="">
+            <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="catalog-filter-group-left">
                 <legend class="catalog-filter-title">Инфраструктура:</legend>
                 <ul class="catalog-filter-list">
@@ -89,24 +89,27 @@
                 </ul>
               </fieldset>
 
-              <fieldset class="catalog-filter-group-left">
+              <fieldset class="catalog-filter-group-middle">
                 <legend class="catalog-filter-title">Тип жилья:</legend>
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
                     <label>
                       <input type="radio" name="accomodation-type" value="hotel" checked>
+                      <span class="radio-button-checked"></span>
                       Гостиница
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label>
                       <input type="radio" name="accomodation-type" value="motel">
+                      <span class="radio-button-checked"></span>
                       Мотель
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label>
                       <input type="radio" name="accomodation-type" value="apartments">
+                      <span class="radio-button-checked"></span>
                       Апартаменты
                     </label>
                   </li>
@@ -114,25 +117,25 @@
               </fieldset>
               <fieldset class="catalog-filter-group-right">
                 <legend class="catalog-filter-title">Стоимость, <span>Р</span>:</legend>
-                <div class="input-slider min">
-                  <label class="control min-price">
-                    <input class="slider min-input" type="range" min="0" max="15000" step="1" value="0">
-                  </label>
-                </div>
-                <div class="output-area min">
-                  <label class="control min-price">
-                    <output class="slider min-output" name="min-price">0</output>
-                  </label>
-                </div>
-                <div class="input-slider max">
-                  <label class="control max-price">
-                    <input class="slider max-input" type="range" min="0" max="15000" step="1" value="9000">
-                  </label>
-                </div>
-                <div class="output-area max">
-                  <label class="control max-price">
-                    <output class="slider max-output" name="max-price">9000</output>
-                  </label>
+                <div class="price-range">
+                  <div class="input-area min">
+                    <label for="price-min-input"></label>
+                    <input class="price min-input" id="price-min-input" name="price-min-input" type="number" value="0"><span class="min-price">от</span></input>
+                  </div>
+                  <div class="input-area max">
+                    <label for="price-max-input"></label>
+                    <input class="price max-input" id="price-max-input" name="price-max-input" type="number" value="9000"><span class="max-price">до</span></input>
+                  </div>
+                  <div class="range-scale">
+                    <div class="range-bar" style="left: 0; width: 226px">
+                      <button class="range-toggle toggle-min">
+                        <span class="visually-hidden">Установить минимальную стоимость.</span>
+                      </button>
+                      <button class="range-toggle toggle-max">
+                        <span class="visually-hidden">Установить максимальную стоимость.</span>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </fieldset>
               <div class="buttons-container">
@@ -151,9 +154,11 @@
               </p>
             </div>
             <div class="sort-by-container">
-              <select class="sort-by" name="category">
-                <option value="lower-price">Сначала дешевые</option>
+              <label for="sorting"></label>
+              <select class="sort-by" name="sorting" id="sorting">
+                <option value="lower-price" selected>Сначала дешевые</option>
                 <option value="higher-price">Сначала дорогие</option>
+                <option value="most-popular">Сначала популярные</option>
               </select>
               <ul class="display-as">
                 <li class="display-as-wrapper">
