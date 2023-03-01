@@ -1509,7 +1509,7 @@ input[type=email]:active {
   flex-direction: column;
   padding: 64px 70px;
   border-radius: 30px;
-  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
 }
 
@@ -1551,7 +1551,6 @@ input[type=email]:active {
   display: grid;
   grid-template-columns: 138px 110px 88px 131px 110px;
   grid-template-rows: repeat(2, auto) 23px repeat(2, auto) 23px auto 48px auto;
-  margin: 0;
 }
 
 .modal-title {
@@ -1601,15 +1600,6 @@ input[type=email]:active {
   font-weight: 700;
   line-height: 24px;
   position: relative;
-}
-
-.placeholder-date {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-  position: absolute;
-  top: 0;
-  left: 157px;
 }
 
 .dates-message {
@@ -1688,6 +1678,7 @@ input[type=email]:active {
   display: flex;
   align-items: center;
   position: relative;
+  justify-content: space-between;
 }
 
 .hotel-search-form .dates-message {
@@ -1739,7 +1730,6 @@ input[type=email]:active {
   display: block;
   position: absolute;
   border: none;
-  border: none;
   width: 20px;
   height: 20px;
   padding: 3px;
@@ -1751,7 +1741,8 @@ input[type=email]:active {
   left: 147px;
 }
 
-.guest-number-control.plus-left {
+.guest-number-control.plus-left,
+.guest-number-control.plus-right {
   right: 10px;
 }
 
@@ -1759,15 +1750,12 @@ input[type=email]:active {
   left: 141px;
 }
 
-.guest-number-control.plus-right {
-  right: 10px;
-}
-
 .guest-number-control.plus-left::before,
-.guest-number-control.plus-right::before {
+.guest-number-control.plus-right::before,
+.guest-number-control.minus-left::before,
+.guest-number-control.minus-right::before {
   content: "";
   position: absolute;
-  top: auto;
   right: 3px;
   width: 14px;
   height: 2px;
@@ -1784,21 +1772,6 @@ input[type=email]:active {
   height: 2px;
   background-color: rgba(117, 97, 87, 0.3);
   transform: rotate(90deg);
-}
-
-.guest-number-control.minus-left::before,
-.guest-number-control.minus-right::before {
-  content: "";
-  position: absolute;
-  width: 14px;
-  height: 2px;
-  background-color: rgba(117, 97, 87, 0.3);
-  right: 3px;
-}
-
-.booking-date .form-label,
-.guest-number .form-label {
-  margin-right: auto;
 }
 
 .modal-close:hover,
