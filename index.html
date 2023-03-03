@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
 
@@ -190,27 +191,35 @@
         </button>
         <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
         <form class="hotel-search-form" action="https://echo.htmlacademy.ru/" method="get">
-          <p class="field-group check-in booking-date">
-            <label class="form-label" for="check-in-date">Дата заезда:</label>
+          <div class="field-group check-in booking-date">
+            <label class="form-label" for="check-in-date">Дата Заезда:</label>
             <input class="booking-date-field" type="text" id="check-in-date" name="check-in-date" placeholder="Укажите дату">
-          </p>
+            <button class="calendar-icon" type="button">
+              <span class="visually-hidden">Кнопка календарь для выбора даты заезда</span>
+            </button>
+          </div>
           <span class="dates-message error-warning">Мы не можем отправить вас в прошлое.</span>
-          <p class="field-group check-out booking-date">
-            <label class="form-label" for="check-out-date">Дата выезда:</label>
+          <div class="field-group check-out booking-date">
+            <label class="form-label" for="check-out-date">Дата Выезда:</label>
             <input class="booking-date-field" type="text" id="check-out-date" name="check-out-date" placeholder="Укажите дату">
-          </p>
+            <button class="calendar-icon" type="button">
+              <span class="visually-hidden">Кнопка календарь для выбора даты выезда</span>
+            </button>
+          </div>
           <span class="dates-message warning">На эти даты есть свободные номера. Пока есть.</span>
-          <p class="guest-number-field left-side">
+          <div class="guest-number-field left-side">
             <label class="form-label" for="guest-number-adults">Взрослые:</label>
-            <input class="guest-number adults" id="guest-number-adults" name="guest-number-adults" type="number" step="1" value="2" min="1">
-            <button class="guest-number-control minus-left" type="button">
-              <span class="visually-hidden">Кнопка минус для убавления количества гостей</span>
-            </button>
-            <button class="guest-number-control plus-left" type="button">
-              <span class="visually-hidden">Кнопка плюс для прибавления количества гостей</span>
-            </button>
-          </p>
-          <p class="guest-number-field right-side">
+            <div class="guest-number-container">
+              <input class="guest-number adults" id="guest-number-adults" name="guest-number-adults" type="number" step="1" value="2" min="1">
+              <button class="guest-number-control minus-left" type="button">
+                <span class="visually-hidden">Кнопка минус для убавления количества гостей</span>
+              </button>
+              <button class="guest-number-control plus-left" type="button">
+                <span class="visually-hidden">Кнопка плюс для прибавления количества гостей</span>
+              </button>
+            </div>
+          </div>
+          <div class="guest-number-field right-side">
             <span class="form-label">
               <label class="form-label" for="guest-number-children">Дети:</label>
               <span class="tooltip">
@@ -222,14 +231,16 @@
                 </span>
               </span>
             </span>
-            <input class="guest-number children" id="guest-number-children" name="guest-number-children" type="number" step="1" value="2" min="0">
-            <button class="guest-number-control minus-right" type="button">
-              <span class="visually-hidden">Кнопка минус для убавления количества гостей</span>
-            </button>
-            <button class="guest-number-control plus-right" type="button">
-              <span class="visually-hidden">Кнопка плюс для прибавления количества гостей</span>
-            </button>
-          </p>
+            <div class="guest-number-container">
+              <input class="guest-number children" id="guest-number-children" name="guest-number-children" type="number" step="1" value="2" min="0">
+              <button class="guest-number-control minus-right" type="button">
+                <span class="visually-hidden">Кнопка минус для убавления количества гостей</span>
+              </button>
+              <button class="guest-number-control plus-right" type="button">
+                <span class="visually-hidden">Кнопка плюс для прибавления количества гостей</span>
+              </button>
+            </div>
+          </div>
           <button class="modal submit-button" type="submit"><span>Найти</span></button>
         </form>
       </div>

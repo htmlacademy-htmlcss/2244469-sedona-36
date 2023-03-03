@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Гостиницы</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
 
@@ -95,37 +96,36 @@
                   <li class="catalog-filter-item">
                     <label>
                       <input type="radio" name="accomodation-type" value="hotel" checked>
-                      <span class="radio-button-checked"></span>
                       Гостиница
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label>
                       <input type="radio" name="accomodation-type" value="motel">
-                      <span class="radio-button-checked"></span>
                       Мотель
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label>
                       <input type="radio" name="accomodation-type" value="apartments">
-                      <span class="radio-button-checked"></span>
                       Апартаменты
                     </label>
                   </li>
                 </ul>
               </fieldset>
               <fieldset class="catalog-filter-group-right">
-                <legend class="catalog-filter-title">Стоимость, <span>Р</span>:</legend>
+                <legend class="catalog-filter-title">Стоимость, Р:</legend>
                 <div class="price-range">
-                  <div class="input-area min">
-                    <label for="price-min-input"></label>
-                    <input class="price min-input" id="price-min-input" name="price-min-input" type="number" value="0"><span class="min-price">от</span></input>
-                  </div>
-                  <div class="input-area max">
-                    <label for="price-max-input"></label>
-                    <input class="price max-input" id="price-max-input" name="price-max-input" type="number" value="9000"><span class="max-price">до</span></input>
-                  </div>
+                  <label class="input-area min">
+                    <input class="price min-input" id="price-min-input" name="price-min-input" type="number" value="0">
+                      <span class="min-price">от</span>
+                    </input>
+                  </label>
+                  <label class="input-area max">
+                    <input class="price max-input" id="price-max-input" name="price-max-input" type="number" value="9000">
+                      <span class="max-price">до</span>
+                    </input>
+                  </label>
                   <div class="range-scale">
                     <div class="range-bar" style="left: 0; width: 226px">
                       <button class="range-toggle toggle-min">
@@ -188,7 +188,7 @@
                   <h3 class="hotel-card-title">Amara Resort & Spa</h3>
                 </a>
                 <p class="hotel-type">Гостиница</p>
-                <p class="hotel-min-price">От 4000 <span>Р</span></p>
+                <p class="hotel-min-price">От 4000 Р</p>
                 <a class="hotel-description-page" href="#">Подробнее</a>
                 <button class="add-to-favs" type="button">В избранное</button>
                 <div class="rating-stars four-stars">
@@ -202,7 +202,7 @@
                   <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
                 </a>
                 <p class="hotel-type">Гостиница</p>
-                <p class="hotel-min-price">От 5000 <span>Р</span></p>
+                <p class="hotel-min-price">От 5000 Р</p>
                 <a class="hotel-description-page" href="#">Подробнее</a>
                 <button class="in-favs" type="button">В избранном</button>
                 <div class="rating-stars four-stars">
@@ -216,7 +216,7 @@
                   <h3 class="hotel-card-title">Desert Quail Inn</h3>
                 </a>
                 <p class="hotel-type">Гостиница</p>
-                <p class="hotel-min-price">От 2500 <span>Р</span></p>
+                <p class="hotel-min-price">От 2500 Р</p>
                 <a class="hotel-description-page" href="#">Подробнее</a>
                 <button class="add-to-favs" type="button">В избранное</button>
                 <div class="rating-stars three-stars">
@@ -230,7 +230,7 @@
                   <h3 class="hotel-card-title">GreenTree Inn</h3>
                 </a>
                 <p class="hotel-type">Гостиница</p>
-                <p class="hotel-min-price">От 1500 <span>Р</span></p>
+                <p class="hotel-min-price">От 1500 Р</p>
                 <a class="hotel-description-page" href="#">Подробнее</a>
                 <button class="add-to-favs" type="button">В избранное</button>
                 <div class="rating-stars two-stars">

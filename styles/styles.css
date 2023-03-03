@@ -15,15 +15,16 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-width: 1280px;
+  min-height: 100%;
+  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
   background-color: #F2F2F2;
-  margin: 0;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 .navigation-link {
@@ -53,11 +54,21 @@ body {
 }
 
 .greeting-banner {
-  background:
-  url(../images/main-banner-divider.svg) no-repeat center bottom,
-  url(../images/photos/background-index.jpg) no-repeat center;
-  background-size: 100% auto, cover;
+  background: url(../images/photos/background-index.jpg) no-repeat center;
+  background-size: cover;
   background-color: #222c37;
+  position: relative;
+}
+
+.greeting-banner::after {
+  content: "";
+  position: absolute;
+  background: url(../images/main-banner-divider.svg) no-repeat;
+  bottom: -1px;
+  width: 100%;
+  height: 57px;
+  left: 0;
+  z-index: 1;
 }
 
 .intro,
@@ -117,7 +128,9 @@ body {
   background-color:#83B3D3;
 }
 
-.group-2 {
+.group-2,
+.housing,
+.gifts {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -137,28 +150,43 @@ body {
   color: #333333;
 }
 
-.housing {
-  background-image: url(../images/services-house.svg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: 162px 81px;
-  background-color: rgba(131, 179, 211, 0.12);
+.housing::before {
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 72px;
+  margin-top: 20%;
+  margin-bottom: 30px;
+  left: 50%;
+  background: url(../images/services-house.svg) no-repeat center;
+  background-size: 100%;
+  transform: translateX(-50%);
 }
 
-.food {
-  background-image: url(../images/services-food.svg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: 162px 81px;
-  background-color: #FFFFFF;
+.food::before {
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 71px;
+  margin-top: 20%;
+  margin-bottom: 30px;
+  left: 50%;
+  background: url(../images/services-food.svg) no-repeat center;
+  background-size: 100%;
+  transform: translateX(-50%);
 }
 
-.gifts {
-  background-image: url(../images/services-gift.svg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: 162px 81px;
-  background-color: rgba(131, 179, 211, 0.12);
+.gifts::before {
+  content: "";
+  position: absolute;
+  width: 65px;
+  height: 77px;
+  margin-top: 20%;
+  margin-bottom: 30px;
+  left: 50%;
+  background: url(../images/services-gift.svg) no-repeat center;
+  background-size: 100%;
+  transform: translateX(-50%);
 }
 
 .hotel-search {
@@ -216,13 +244,15 @@ body {
   color: inherit;
 }
 
-.newsletter-subscription .field {
-  background-image: url(../images/icons/newsletter-email.svg);
-  background-repeat: no-repeat;
-  background-size: 16px 15px;
-  background-color: #F2F2F2;
-  margin: 0;
-  background-position: 367px center;
+.newsletter-main-page .newsletter-subscription::after {
+  position: absolute;
+  right: 297px;
+  top: 16px;
+  width: 16px;
+  height: 16px;
+  background: url(../images/icons/newsletter-email.svg);
+  content: "";
+  opacity: 0.3;
 }
 
 .social-item {
@@ -407,10 +437,6 @@ body {
   text-decoration: none;
 }
 
-.newsletter-subscription .catalog {
-  background-image: none;
-}
-
 .search-button {
   background-image: url(../images/icons/user-menu-search.svg);
   background-repeat: no-repeat;
@@ -523,6 +549,7 @@ html {
   position: absolute;
   top: 0;
   left: 70px;
+  z-index: 2;
 }
 
 .navigation-menu {
@@ -594,6 +621,7 @@ html {
 .group-2,
 .group-3,
 .services-item {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 400px;
@@ -649,6 +677,7 @@ html {
 
 .newsletter-subscription {
   margin: 54px 0 0;
+  position: relative;
 }
 
 .footer-container {
@@ -858,6 +887,7 @@ html {
   line-height: 24px;
   font-weight: 400;
   padding-left: 20px;
+  background-color: #F2F2F2;
 }
 
 .hotels-filter-header h1 {
@@ -866,6 +896,7 @@ html {
 
 .breadcrumbs {
   align-items: flex-end;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -1026,6 +1057,7 @@ html {
   height: 2px;
   background-color: #756257;
   content: "";
+  z-index: 2;
 }
 
 .advantages-item h3 {
@@ -1191,19 +1223,11 @@ input[type=radio] {
 }
 
 input[type=checkbox]:checked {
-  background: url("../images/catalog-filter-checkmark.svg") no-repeat center;
-  background-color: #FFFFFF;
+  background: #FFFFFF url("../images/catalog-filter-checkmark.svg") no-repeat center;
 }
 
-input[type=radio]:checked + .radio-button-checked::before {
-  content: "";
-  background-color: #3F5E72;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  position: absolute;
-  top: 6px;
-  left: 5px;
+input[type=radio]:checked {
+  background: #FFFFFF url("../images/radio-button-checked.svg") no-repeat center;
 }
 
 input[type=checkbox]:focus,
@@ -1344,7 +1368,7 @@ input[type=radio]:focus-visible {
   text-decoration: underline;
 }
 
-.hotel-card .hotel-card-link:focus {
+.hotel-card-link:focus {
   outline: 2px solid #68A2CA;
   border-radius: 4px;
   outline-offset: 4px;
@@ -1424,24 +1448,22 @@ input[type=email]:active {
   outline-offset: -1px;
 }
 
-.input-area .min-price {
+.input-area .min-price,
+.input-area .max-price {
   position: absolute;
-  color: #000000;
+  color: rgba(0, 0, 0, 0.3);
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  left: 106px;
   top: 12px;
 }
 
+.input-area .min-price {
+  left: 106px;
+}
+
 .input-area .max-price {
-  position: absolute;
-  color: #000000;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
   right: 20px;
-  top: 12px;
 }
 
 .price.min-input {
@@ -1494,20 +1516,21 @@ input[type=email]:active {
 
 .modal-container {
   position: fixed;
-  background-color: rgba(242, 242, 242, 0.8);
+  display: flex;
   width: 100%;
   height: 100%;
-  display: flex;
+  background-color: rgba(242, 242, 242, 0.8);
+  z-index: 3;
 }
 
 .modal-hotel-search-form {
   position: relative;
-  width: 717px;
-  margin: auto;
-  background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
+  width: 717px;
+  margin: auto;
   padding: 64px 70px;
+  background-color: #FFFFFF;
   border-radius: 30px;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
@@ -1515,33 +1538,32 @@ input[type=email]:active {
 
 .modal-close,
 .modal.submit-button {
+  display: inline-block;
   margin: 0;
   padding: 0;
   border: none;
-  display: inline-block;
   cursor: pointer;
 }
 
 .modal-close {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
   position: absolute;
   top: 64px;
   right: 52px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
 }
 
 .modal-close::after {
-  content: "";
   position: absolute;
-  width: 20px;
-  height: 20px;
-  background: url("../images/modal-form-close.svg") no-repeat center;
   top: 16px;
   right: 16px;
+  width: 20px;
+  height: 20px;
+  content: "";
+  background: url("../images/modal-form-close.svg") no-repeat center;
 }
 
-.hotel-search-form p,
 .hotel-search-form span {
   margin: 0;
   padding: 0;
@@ -1549,13 +1571,18 @@ input[type=email]:active {
 
 .hotel-search-form {
   display: grid;
-  grid-template-columns: 138px 110px 88px 131px 110px;
+  grid-template-columns: 138px 110px 88px 242px;
   grid-template-rows: repeat(2, auto) 23px repeat(2, auto) 23px auto 48px auto;
 }
 
 .modal-title {
   margin: 0;
   margin-bottom: 64px;
+  padding: 0 54px 0 0;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .booking-date,
@@ -1573,14 +1600,15 @@ input[type=email]:active {
 
 .guest-number-field.left-side,
 .guest-number-field.right-side {
-  grid-row: -3/-4;
+  position: relative;
   display: flex;
   align-items: center;
-  position: relative;
   justify-content: space-between;
+  grid-row: -3/-4;
 }
 
 .modal.submit-button {
+  padding: 18px;
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
   line-height: 24px;
@@ -1591,47 +1619,60 @@ input[type=email]:active {
   text-decoration: none;
   border: none;
   border-radius: 10px;
-  padding: 18px;
   grid-row: -1/-2;
 }
 
 .form-label {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 24px;
   position: relative;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.calendar-icon {
+  position: absolute;
+  right: 0;
+  width: 56px;
+  height: 42px;
+  padding: 14px 20px;
+  background: url("../images/icons/newsletter-email.svg") no-repeat center;
+  background-size: 16px 15px;
+  border: none;
+  appearance: none;
+  opacity: 0.3;
+  cursor: pointer;
 }
 
 .dates-message {
   font-size: 16px;
-  font-weight: 400;
   line-height: 21px;
+  font-weight: 400;
 }
 
 .tooltip-toggle {
-  background: url(../images/modal-tooltip-info-button.svg) no-repeat;
+  position: absolute;
+  left: 60px;
   width: 26px;
   height: 26px;
-  position: absolute;
+  background: url(../images/modal-tooltip-info-button.svg) no-repeat;
   border: none;
-  left: 60px;
   cursor: pointer;
 }
 
 .tooltip.children-guests {
   position: absolute;
+  top: 40px;
+  left: -65px;
+  width: 256px;
+  padding: 15px 18px 18px 22px;
   font-size: 16px;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
   color: #FFFFFF;
   background-color: #333333;
-  width: 256px;
   box-sizing: border-box;
   border-radius: 10px;
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
-  padding: 15px 18px 18px 22px;
-  top: 40px;
-  left: -65px;
   z-index: 1;
   display: none;
 }
@@ -1660,18 +1701,6 @@ input[type=email]:active {
   font-weight: 700;
   line-height: 24px;
   color: #000000;
-}
-
-.field-group.booking-date::before {
-  background: url(../images/icons/newsletter-email.svg) no-repeat;
-  display: inline-block;
-  content: "";
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 14px;
-  right: 20px;
-  opacity: 0.3;
 }
 
 .booking-date {
@@ -1703,6 +1732,13 @@ input[type=email]:active {
   grid-row: 4/5;
 }
 
+.guest-number-container {
+  position: relative;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
 .guest-number {
   border: none;
   display: block;
@@ -1717,7 +1753,6 @@ input[type=email]:active {
   font-size: 18px;
   font-weight: 700;
   line-height: 20px;
-  position: relative;
 }
 
 .guest-number::-webkit-outer-spin-button,
@@ -1737,17 +1772,16 @@ input[type=email]:active {
   cursor: pointer;
 }
 
-.guest-number-control.minus-left {
-  left: 147px;
+.guest-number-control.minus-left,
+.guest-number-control.minus-right {
+  left: 10px;
+  top: 14px;
 }
 
 .guest-number-control.plus-left,
 .guest-number-control.plus-right {
   right: 10px;
-}
-
-.guest-number-control.minus-right {
-  left: 141px;
+  top: 14px;
 }
 
 .guest-number-control.plus-left::before,
@@ -1797,6 +1831,30 @@ input[type=email]:active {
 .booking-date-field:active {
   background-color: #F2F2F2;
   outline: 2px solid #000000;
+}
+
+.calendar-icon:hover,
+.calendar-icon:active {
+  opacity: 1;
+}
+
+.calendar-icon:focus {
+  opacity: 1;
+  outline: 2px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.calendar-icon:focus:not(:focus-visible) {
+  outline: transparent;
+}
+
+.guest-number:focus {
+  outline: 2px solid #83B3D3;
+}
+
+.guest-number:focus-visible {
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
 }
 
 .guest-number-control.plus-left:hover::before,
@@ -1851,7 +1909,8 @@ input[type=email]:active {
   opacity: 0.2;
 }
 
-.tooltip-toggle:hover + .children-guests {
+.tooltip-toggle:hover + .children-guests,
+.tooltip-toggle:focus + .children-guests {
   display: block;
 }
 
