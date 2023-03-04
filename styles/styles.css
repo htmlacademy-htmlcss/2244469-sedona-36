@@ -527,7 +527,17 @@ html {
 }
 
 .site-navigation {
-  width: 1100px; /*962px; - из-за position absolute у лого, он вылетел, поэтому увеличила*/
+  width: 1100px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-list {
+  align-items: center;
+}
+
+.navigation-list li {
+  display: flex;
 }
 
 .advantages-list,
@@ -840,11 +850,10 @@ html {
 
 .pagination {
   justify-content: flex-start;
+  align-items: flex-end;
 }
 
 .pagination-item {
-  width: 60px;
-  height: 60px;
   text-align: center;
   position: relative;
 }
@@ -853,7 +862,7 @@ html {
 
 .user-menu-item {
   min-width: 44px;
-  height: 64px;
+  min-height: 64px;
 }
 
 .advantages-item-text-center h3 {
@@ -998,8 +1007,8 @@ html {
   display: block;
   box-sizing: border-box;
   border-radius: 4px;
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
   padding: 12px;
 }
 
@@ -1595,7 +1604,7 @@ input[type=email]:active {
 }
 
 .guest-number-field.right-side {
-  grid-column: 4/-1;
+  grid-column: -2/-1;
 }
 
 .guest-number-field.left-side,
@@ -1649,9 +1658,14 @@ input[type=email]:active {
   font-weight: 400;
 }
 
+.tooltip {
+  position: relative;
+}
+
 .tooltip-toggle {
   position: absolute;
-  left: 60px;
+  top: 0;
+  right: -36px;
   width: 26px;
   height: 26px;
   background: url(../images/modal-tooltip-info-button.svg) no-repeat;
@@ -1662,7 +1676,7 @@ input[type=email]:active {
 .tooltip.children-guests {
   position: absolute;
   top: 40px;
-  left: -65px;
+  left: -113px;
   width: 256px;
   padding: 15px 18px 18px 22px;
   font-size: 16px;
@@ -1679,12 +1693,12 @@ input[type=email]:active {
 
 .tooltip.children-guests::before {
   content: "";
-  background: url(../images/modal-tooltip-arrow.svg) no-repeat top center;
+  background: url(../images/modal-tooltip-arrow.svg) no-repeat;
   position: absolute;
   width: 19px;
   height: 9px;
-  bottom: 100%;
-  left: 50%;
+  top: -8px;
+  left: 49%;
 }
 
 .booking-date-field {
@@ -1759,6 +1773,10 @@ input[type=email]:active {
 .guest-number::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .guest-number-control {
