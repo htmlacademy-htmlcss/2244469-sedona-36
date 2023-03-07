@@ -300,7 +300,7 @@ body {
 }
 
 .hotels-filter-container {
-  width: 1086px;
+  width: 1060px;
   padding: 0;
   margin: 0;
 }
@@ -828,7 +828,7 @@ html {
 /* CATALOG */
 
 .hotels-filter {
-  padding: 35px 43px 54px 70px;
+  padding: 35px 70px 54px;
   margin: 0;
 }
 
@@ -868,7 +868,7 @@ html {
 }
 
 .catalog-filter-group-middle {
-  margin-right: 167px;
+  margin-right: 140px;
 }
 
 .catalog-filter-group-right {
