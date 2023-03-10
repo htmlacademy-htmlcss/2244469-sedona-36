@@ -254,17 +254,6 @@ body {
   color: inherit;
 }
 
-.newsletter-main-page .newsletter-subscription::after {
-  position: absolute;
-  right: 300px;
-  top: 17px;
-  width: 16px;
-  height: 16px;
-  background: url("../images/icons/newsletter-email.svg");
-  content: "";
-  opacity: 0.3;
-}
-
 .social-item {
   width: 47px;
   height: 40px;
