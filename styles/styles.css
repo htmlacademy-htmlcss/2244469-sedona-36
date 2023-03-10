@@ -817,7 +817,7 @@ html {
 /* CATALOG */
 
 .hotels-filter {
-  padding: 35px 70px 54px;
+  padding: 34px 70px 54px;
   margin: 0;
 }
 
@@ -1032,7 +1032,7 @@ html {
   max-width: 300px;
   margin: 0;
   padding: 0;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -1438,7 +1438,7 @@ html {
 }
 
 .catalog-filter-item {
-  margin: 0 0 15px;
+  margin: 0 0 16px;
   position: relative;
 }
 
@@ -1479,7 +1479,10 @@ input[type="radio"]:focus {
 }
 
 .catalog-filter .reset-button:hover,
-.catalog-filter-item:hover {
+input[type="checkbox"]:hover,
+input[type="checkbox"]:hover + span,
+input[type="radio"]:hover,
+input[type="radio"]:hover + span {
   opacity: 0.6;
   outline: transparent;
 }
@@ -1501,7 +1504,10 @@ input[type="radio"]:focus-visible {
 }
 
 .catalog-filter .reset-button:active,
-.catalog-filter-item:active {
+input[type="checkbox"]:active,
+input[type="checkbox"]:active + span,
+input[type="radio"]:active,
+input[type="radio"]:active + span {
   opacity: 0.3;
   outline: transparent;
 }
@@ -1509,6 +1515,24 @@ input[type="radio"]:focus-visible {
 .catalog-filter .reset-button:disabled {
   opacity: 0.1;
   outline: transparent;
+}
+
+input[type="checkbox"]:disabled {
+  background: #FFF;
+  opacity: 0.2;
+}
+
+input[type="checkbox"]:disabled + span {
+  opacity: 0.2;
+}
+
+input[type="radio"]:disabled {
+  background: #FFF;
+  opacity: 0.2;
+}
+
+input[type="radio"]:disabled + span {
+  opacity: 0.2;
 }
 
 .breadcrumbs-item a[href]:hover {
