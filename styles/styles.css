@@ -1630,6 +1630,18 @@ input[type="radio"]:disabled + span {
   border-radius: 4px;
 }
 
+.navigation-link-page-logo[href]:focus:not(:focus-visible),
+.site-navigation a:not(.navigation-current, .booking-button):focus:not(:focus-visible) {
+  outline: transparent;
+}
+
+.navigation-link-page-logo[href]:focus-visible,
+.site-navigation a:not(.navigation-current, .booking-button):focus-visible {
+  outline: 2px solid #000;
+  outline-offset: -2px;
+  border-radius: 4px;
+}
+
 .hotel-card-link h3:hover {
   text-decoration: underline;
 }
